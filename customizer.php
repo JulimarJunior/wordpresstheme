@@ -16,66 +16,22 @@
 				'section' 	=> 'footer',
 			)
 		);
-		$wp_customize->add_setting( 'ps_logo_1' );
-		$wp_customize->add_control(
-			new WP_Customize_Media_Control(
-				$wp_customize,
-				'ps_logo_1',
-				array(
-					'label'     => __( 'Partner or Sponsors 1', 'odin' ),
-					'section'   => 'footer',
-					'mime_type' => 'image',
+
+		$menus = ['1','2','3','4','5'];
+		foreach ($menus as $menu) {
+			$wp_customize->add_setting( 'ps_logo_' . $menu );
+			$wp_customize->add_control(
+				new WP_Customize_Media_Control(
+					$wp_customize,
+					'ps_logo_' . $menu,
+					array(
+						'label'     => __( 'Partner or Sponsors ' . $menu, 'odin' ),
+						'section'   => 'footer',
+						'mime_type' => 'image',
+					)
 				)
-			)
-		);
-		$wp_customize->add_setting( 'ps_logo_2' );
-		$wp_customize->add_control(
-			new WP_Customize_Media_Control(
-				$wp_customize,
-				'ps_logo_2',
-				array(
-					'label'     => __( 'Partner or Sponsors 2', 'odin' ),
-					'section'   => 'footer',
-					'mime_type' => 'image',
-				)
-			)
-		);
-		$wp_customize->add_setting( 'ps_logo_3' );
-		$wp_customize->add_control(
-			new WP_Customize_Media_Control(
-				$wp_customize,
-				'ps_logo_3',
-				array(
-					'label'     => __( 'Partner or Sponsors 3', 'odin' ),
-					'section'   => 'footer',
-					'mime_type' => 'image',
-				)
-			)
-		);
-		$wp_customize->add_setting( 'ps_logo_4' );
-		$wp_customize->add_control(
-			new WP_Customize_Media_Control(
-				$wp_customize,
-				'ps_logo_4',
-				array(
-					'label'     => __( 'Partner or Sponsors 4', 'odin' ),
-					'section'   => 'footer',
-					'mime_type' => 'image',
-				)
-			)
-		);
-		$wp_customize->add_setting( 'ps_logo_5' );
-		$wp_customize->add_control(
-			new WP_Customize_Media_Control(
-				$wp_customize,
-				'ps_logo_5',
-				array(
-					'label'     => __( 'Partner or Sponsors 5', 'odin' ),
-					'section'   => 'footer',
-					'mime_type' => 'image',
-				)
-			)
-		);
+			);
+		}
 
 		$wp_customize->add_section(
 			'theme',
