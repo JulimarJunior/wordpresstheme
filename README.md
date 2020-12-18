@@ -9,14 +9,14 @@ Tema para WordPress desenvolvido para ser utilizado pelo **TPW** em seu projeto 
 Alguns códigos do tema que são interessantes citar:
 
 **Permite a adição de imagens em destaque nos artigos e edição direta de menus através do functions.php.**
-```
+```php
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 ```
 
 **Cria de menu através do **functions.php** na ativação do tema.**
 
-```
+```php
 // Verifica se a função já foi executada para evitar erros
 if(!function_exists('theme_setup')) {
 	function theme_setup() {
@@ -43,7 +43,7 @@ add_action('after_setup_theme', 'theme_setup');
 *Agradecimentos: [Dimas A. Pante](https://www.facebook.com/dimaspante)*
 
 **Cria um campo de edição do tema através do functions.php**
-```
+```php
 // Cria a seção de edição na plataforma do WordPress
 $wp_customize->add_section(
 	'theme',
@@ -88,10 +88,12 @@ $wp_customize->add_control(
 	)
 );
 ```
-![Exemplo de edições](https://i.imgur.com/ifskSMT.png)
+<p align="center">
+    <img alt="Exemplo de edições" src="https://i.imgur.com/ifskSMT.png">
+</p>
 
 **Utilização dos valores inseridos nos campos personalizados nos templates**
-```
+```php
 // Exibir valor inserido em um campo de texto simples ou cor
 <?= get_theme_mod('display_name') ?>
 
@@ -104,7 +106,7 @@ if ($logo) {
 ```
 
 **Exibir itens do menu personalizado nos templates**
-```
+```php
 <?php 
 	// Armazena os itens do menu em uma variável
 	$navbar_items = wp_get_nav_menu_items('your-links');
