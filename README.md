@@ -1,7 +1,19 @@
 # Tema WordPress TPW
 
+### Sobre
 Tema para WordPress desenvolvido para ser utilizado pelo **TPW** em seu projeto e para estudos de programação.
 > Design desenvolvido parcialmente por [ThePotatoWard](https://twitter.com/thepotatoward)
+
+---
+
+### Recursos
+- [Bootstrap Grid 4.1.3](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+- [WordPress 5.6](https://br.wordpress.org/download/)
+- [jQuery 3.2.1](https://jquery.com/download/)
+- [PHP 7.4.0](https://www.php.net/)
+- [HTML 5](https://www.w3schools.com/html/default.asp)
+- [CSS 3](https://www.w3schools.com/css/default.asp)
+- [JavaScript](https://www.javascript.com/)
 
 ---
 
